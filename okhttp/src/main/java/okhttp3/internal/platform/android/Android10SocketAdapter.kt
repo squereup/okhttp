@@ -55,7 +55,7 @@ class Android10SocketAdapter : SocketAdapter {
     val sslParameters = sslSocket.sslParameters
 
     // Enable ALPN.
-    sslParameters.applicationProtocols = Platform.alpnProtocolNames(protocols).toTypedArray()
+//    sslParameters.applicationProtocols = Platform.alpnProtocolNames(protocols).toTypedArray()
 
     sslSocket.sslParameters = sslParameters
   }

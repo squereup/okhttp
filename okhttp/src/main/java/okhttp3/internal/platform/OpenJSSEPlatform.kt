@@ -64,7 +64,7 @@ class OpenJSSEPlatform private constructor() : Platform() {
       if (sslParameters is org.openjsse.javax.net.ssl.SSLParameters) {
         // Enable ALPN.
         val names = alpnProtocolNames(protocols)
-        sslParameters.applicationProtocols = names.toTypedArray()
+//        sslParameters.applicationProtocols = names.toTypedArray()
 
         sslSocket.sslParameters = sslParameters
       }
