@@ -11,11 +11,6 @@ dependencies {
   api project(':okhttp')
   compileOnly deps.jsr305
 
-  testImplementation project(':okhttp-testing-support')
-  testImplementation project(':mockwebserver')
-  testImplementation deps.junit
-  testImplementation deps.assertj
-  testCompileOnly deps.jsr305
 }
 
 afterEvaluate { project ->

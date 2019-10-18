@@ -28,7 +28,6 @@ dependencies {
   implementation deps.picocli
   implementation deps.guava
 
-  testImplementation project(':okhttp-testing-support')
   testImplementation deps.junit
   testImplementation deps.assertj
 }

@@ -10,11 +10,6 @@ dependencies {
   api project(':okhttp')
   compileOnly deps.jsr305
 
-  testImplementation project(':okhttp-testing-support')
-  testImplementation project(':mockwebserver')
-  testImplementation deps.conscrypt
-  testImplementation deps.junit
-  testImplementation deps.assertj
 }
 
 afterEvaluate { project ->

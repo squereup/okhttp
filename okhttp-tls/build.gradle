@@ -13,9 +13,6 @@ dependencies {
   implementation deps.bouncycastle
   compileOnly deps.jsr305
 
-  testImplementation project(':okhttp-testing-support')
-  testImplementation deps.junit
-  testImplementation deps.assertj
 }
 
 afterEvaluate { project ->

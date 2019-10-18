@@ -13,10 +13,6 @@ dependencies {
 
   testCompileOnly deps.jsr305
   testImplementation deps.junit
-  testImplementation project(':mockwebserver')
-  testImplementation project(':okhttp-testing-support')
-  testImplementation project(':okhttp-tls')
-  testImplementation deps.assertj
 }
 
 afterEvaluate { project ->
