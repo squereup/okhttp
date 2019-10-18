@@ -278,7 +278,7 @@ open class PlatformRule @JvmOverloads constructor(
           is ConscryptPlatform -> CONSCRYPT_PROPERTY
           is OpenJSSEPlatform -> OPENJSSE_PROPERTY
           is Jdk8WithJettyBootPlatform -> CONSCRYPT_PROPERTY
-          is Jdk9Platform -> JDK9_PROPERTY
+//          is Jdk9Platform -> JDK9_PROPERTY
           else -> JDK8_PROPERTY
         }
       }
