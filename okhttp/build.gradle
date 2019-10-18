@@ -11,17 +11,6 @@ sourceSets {
   main.java.srcDirs += "$buildDir/generated/sources/java-templates/java/main"
 }
 
-compileKotlin {
-  dependsOn 'copyJavaTemplates'
-}
-
-task copyJavaTemplates(type: Copy) {
-  from 'src/main/java-templates'
-  into "$buildDir/generated/sources/java-templates/java/main"
-  expand('projectVersion': "$VERSION_NAME")
-  filteringCharset = 'UTF-8'
-}
-
 dependencies {
   api deps.okio
   api deps.kotlinStdlib

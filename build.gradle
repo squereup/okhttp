@@ -77,12 +77,12 @@ allprojects {
     google()
   }
 
-  task downloadDependencies() {
-    description 'Download all dependencies to the Gradle cache'
-    doLast {
-      configurations.findAll { it.canBeResolved }.files
-    }
-  }
+//  task downloadDependencies() {
+//    description 'Download all dependencies to the Gradle cache'
+//    doLast {
+//      configurations.findAll { it.canBeResolved }.files
+//    }
+//  }
 }
 
 subprojects { project ->
@@ -96,7 +96,6 @@ subprojects { project ->
   apply plugin: 'ru.vyarus.animalsniffer'
   apply plugin: 'net.ltgt.errorprone'
   apply plugin: 'org.jetbrains.dokka'
-  apply plugin: 'com.diffplug.gradle.spotless'
   sourceCompatibility = JavaVersion.VERSION_1_8
   targetCompatibility = JavaVersion.VERSION_1_8
 
@@ -118,12 +117,12 @@ subprojects { project ->
     signature 'org.codehaus.mojo.signature:java18:1.0@signature'
   }
 
-  spotless {
-    kotlin {
-      target "**/*.kt"
-      ktlint(versions.ktlint).userData(['indent_size': '2', 'continuation_indent_size': '2'])
-    }
-  }
+//  spotless {
+//    kotlin {
+//      target "**/*.kt"
+//      ktlint(versions.ktlint).userData(['indent_size': '2', 'continuation_indent_size': '2'])
+//    }
+//  }
 
   tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {

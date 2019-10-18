@@ -1,11 +1,11 @@
 rootProject.name = 'okhttp-parent'
 
 
-include ':okcurl'
+//include ':okcurl'
 include ':okhttp'
-include ':okhttp-brotli'
-include ':okhttp-dnsoverhttps'
-include ':okhttp-logging-interceptor'
-include ':okhttp-sse'
-include ':okhttp-tls'
-include ':okhttp-urlconnection'
+//include ':okhttp-brotli'
+//include ':okhttp-dnsoverhttps'
+//include ':okhttp-logging-interceptor'
+//include ':okhttp-sse'
+//include ':okhttp-tls'
+//include ':okhttp-urlconnection'
