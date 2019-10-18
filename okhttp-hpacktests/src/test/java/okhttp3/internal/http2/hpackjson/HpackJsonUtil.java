@@ -37,7 +37,7 @@ public final class HpackJsonUtil {
   /** Earliest draft that is code-compatible with latest. */
   private static final int BASE_DRAFT = 9;
 
-  private static final String STORY_RESOURCE_FORMAT = "/hpack-test-case/%s/story_%02d.json";
+//  private static final String STORY_RESOURCE_FORMAT = "/hpack-test-case/%s/story_%02d.json";
 
   private static final Moshi MOSHI = new Moshi.Builder().build();
   private static final JsonAdapter<Story> STORY_JSON_ADAPTER = MOSHI.adapter(Story.class);
@@ -52,7 +52,7 @@ public final class HpackJsonUtil {
 
   /** Iterate through the hpack-test-case resources, only picking stories for the current draft. */
   public static String[] storiesForCurrentDraft() throws URISyntaxException {
-    URL resource = HpackJsonUtil.class.getResource("/hpack-test-case");
+    URL resource = null;// HpackJsonUtil.class.getResource("/hpack-test-case");
     if (resource == null) {
       return new String[0];
     }
@@ -80,19 +80,19 @@ public final class HpackJsonUtil {
     List<Story> result = new ArrayList<>();
     int i = 0;
     while (true) { // break after last test.
-      String storyResourceName = String.format(STORY_RESOURCE_FORMAT, testFolderName, i);
-      InputStream storyInputStream = HpackJsonUtil.class.getResourceAsStream(storyResourceName);
+//      String storyResourceName = String.format(STORY_RESOURCE_FORMAT, testFolderName, i);
+      InputStream storyInputStream = null;//HpackJsonUtil.class.getResourceAsStream(storyResourceName);
       if (storyInputStream == null) {
         break;
       }
-      try {
-        Story story = readStory(storyInputStream);
-        story.setFileName(storyResourceName);
-        result.add(story);
-        i++;
-      } finally {
-        storyInputStream.close();
-      }
+//      try {
+//        Story story = readStory(storyInputStream);
+//        story.setFileName(storyResourceName);
+//        result.add(story);
+//        i++;
+//      } finally {
+//        storyInputStream.close();
+//      }
     }
 
     if (result.isEmpty()) {
