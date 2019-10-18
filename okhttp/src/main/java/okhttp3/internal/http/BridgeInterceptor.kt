@@ -21,7 +21,7 @@ import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.Interceptor
 import okhttp3.Response
-import okhttp3.internal.userAgent
+//import okhttp3.internal.userAgent
 import okio.GzipSource
 
 import okhttp3.internal.toHostHeader
@@ -77,9 +77,9 @@ class BridgeInterceptor(private val cookieJar: CookieJar) : Interceptor {
       requestBuilder.header("Cookie", cookieHeader(cookies))
     }
 
-    if (userRequest.header("User-Agent") == null) {
-      requestBuilder.header("User-Agent", userAgent)
-    }
+//    if (userRequest.header("User-Agent") == null) {
+//      requestBuilder.header("User-Agent", userAgent)
+//    }
 
     val networkResponse = chain.proceed(requestBuilder.build())
 

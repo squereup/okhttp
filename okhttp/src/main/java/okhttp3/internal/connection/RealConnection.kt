@@ -46,7 +46,7 @@ import okhttp3.internal.http2.StreamResetException
 import okhttp3.internal.platform.Platform
 import okhttp3.internal.tls.OkHostnameVerifier
 import okhttp3.internal.toHostHeader
-import okhttp3.internal.userAgent
+//import okhttp3.internal.userAgent
 import okhttp3.internal.ws.RealWebSocket
 import okio.BufferedSink
 import okio.BufferedSource
@@ -476,7 +476,7 @@ class RealConnection(
             .method("CONNECT", null)
             .header("Host", route.address.url.toHostHeader(includeDefaultPort = true))
             .header("Proxy-Connection", "Keep-Alive") // For HTTP/1.0 proxies like Squid.
-            .header("User-Agent", userAgent)
+//            .header("User-Agent", userAgent)
             .build()
 
         val fakeAuthChallengeResponse = Response.Builder()
