@@ -19,7 +19,6 @@ import android.net.SSLCertificateSocketFactory
 import android.os.Build
 import okhttp3.Protocol
 import okhttp3.internal.platform.AndroidPlatform.Companion.isAndroid
-import okhttp3.internal.platform.Platform
 import javax.net.ssl.SSLSocket
 import javax.net.ssl.SSLSocketFactory
 import javax.net.ssl.X509TrustManager
@@ -41,10 +40,7 @@ class Android10SocketAdapter : SocketAdapter {
   override fun isSupported(): Boolean = Companion.isSupported()
 
   override fun getSelectedProtocol(sslSocket: SSLSocket): String? =
-      when (val protocol = sslSocket.applicationProtocol) {
-        null, "" -> null
-        else -> protocol
-      }
+      null
 
   override fun configureTlsExtensions(
     sslSocket: SSLSocket,
